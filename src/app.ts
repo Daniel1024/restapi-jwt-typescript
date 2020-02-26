@@ -1,4 +1,5 @@
 import express, {json, urlencoded} from 'express';
+import authRoutes from './routes/auth.routes';
 import morgan from 'morgan';
 import cors from 'cors';
 
@@ -18,5 +19,7 @@ app.use(json());
 app.get('/', (req, res) => {
     res.send(`La API esta en http://localhost:${app.get('port')}`);
 });
+
+app.use(authRoutes);
 
 export default app;
