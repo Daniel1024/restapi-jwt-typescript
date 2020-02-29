@@ -3,7 +3,8 @@ import config from "./config";
 
 const dbOptions: ConnectionOptions = {
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
+    useCreateIndex: true
 };
 
 mongoose.connect(config.DB.URI, dbOptions);
